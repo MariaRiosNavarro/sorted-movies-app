@@ -2,6 +2,7 @@ import ButtonsContainer from "../components/ButtonsContainer";
 import MovieList from "../components/MovieList";
 import ScrollTo from "../components/ScrollTo";
 import { useState } from "react";
+import Search from "../components/Search";
 
 const Home = () => {
   return (
@@ -10,7 +11,10 @@ const Home = () => {
         <h1 className="text-center text-secundary text-4xl p-8 my-8 mx-4 shadow-2xl rounded-2xl bg-orange-50 border-double  border-8 border-primary">
           PROPS Movies
         </h1>
-        <ButtonsContainer />
+        <div className="flex items-center justify-center">
+          <ButtonsContainer />
+          <Search />
+        </div>
         <ScrollTo top={true} />
         <MovieList />
         <ScrollTo top={false} />

@@ -34,15 +34,17 @@ const ButtonsContainer = () => {
   };
   return (
     <>
-      <div className="flex items-center justify-center flex-wrap">
-        <Button action={handleBestRate} name="Rate ⬆" />
-        <Button action={handleWorstRate} name="Rate ⬇" />
-        <Button action={handleDateAscending} name="Date  ⬆" />
-        <Button action={handleDateDescending} name="Date  ⬇" />
-      </div>
-      <div className="flex items-center justify-center flex-wrap">
-        <Button action={handleAphabetical} name="A-Z" />
-        <Button action={handleDescendingAlphabetical} name="Z-A" />
+      <div className="flex-col">
+        <div className="flex items-center justify-center flex-wrap">
+          <Button action={handleBestRate} name="Rate ⬆" />
+          <Button action={handleDateAscending} name="Date  ⬆" />
+          <Button action={handleAphabetical} name="A-Z" />
+        </div>
+        <div className="flex items-center justify-center flex-wrap">
+          <Button action={handleWorstRate} name="Rate ⬇" />
+          <Button action={handleDateDescending} name="Date  ⬇" />
+          <Button action={handleDescendingAlphabetical} name="Z-A" />
+        </div>
       </div>
     </>
   );

@@ -3,6 +3,8 @@ import { useMyContext } from "../Context/useMyContext";
 
 const MovieList = () => {
   const { moviesArray, setMoviesArray } = useMyContext();
+  const { search, setSearch } = useMyContext();
+
   return (
     <>
       <article>
