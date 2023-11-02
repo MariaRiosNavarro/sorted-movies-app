@@ -40,8 +40,8 @@ const MovieList = () => {
   return (
     <>
       <div className="flex items-center justify-center flex-wrap">
-        <Button action={handleWorstRate} name="Rate ⬇" />
         <Button action={handleBestRate} name="Rate ⬆" />
+        <Button action={handleWorstRate} name="Rate ⬇" />
         <Button action={handleDateAscending} name="Date  ⬆" />
         <Button action={handleDateDescending} name="Date  ⬇" />
       </div>
