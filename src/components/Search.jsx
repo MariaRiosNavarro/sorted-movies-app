@@ -11,13 +11,29 @@ const Search = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // New Array to display the search
     let newArray = copyMovies.filter((movie) => {
+      //we check all keys of the array
       for (const key in movie) {
+        //wenn the key ist the same as the selected option
         if (key === option) {
-          let optionValue = movie[key];
-          let lowerOption = optionValue.toLowerCase();
-          let lowerValue = value.toLowerCase();
-          return lowerOption.includes(lowerValue);
+          //in case of Genre(array), we filter another time
+          if (key === "genre") {
+            let genre = movie.genre;
+            let newGenreArray = genre.filter((item) => {
+              let lowItem = item.toLowerCase();
+              let lowerValue = value.toLowerCase();
+              return lowItem.includes(lowerValue);
+            });
+            // Return true if any match is found and add to new array
+            return newGenreArray.length > 0;
+            // in case of the rest (strings), we search directly with .includes
+          } else {
+            let optionValue = movie[key];
+            let lowerOption = optionValue.toLowerCase();
+            let lowerValue = value.toLowerCase();
+            return lowerOption.includes(lowerValue);
+          }
         }
       }
       return false;
