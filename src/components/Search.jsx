@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMyContext } from "../Context/useMyContext";
+import movies from "../db/movies";
 
 const Search = () => {
   const { moviesArray, setMoviesArray } = useMyContext();
@@ -7,12 +8,24 @@ const Search = () => {
   const [value, setValue] = useState("");
   const [option, setOption] = useState("title");
 
-  const copyMovies = [...moviesArray];
+  const copyMovies = [...movies];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Search Query:", value);
     console.log("Search Option:", option);
+    console.log("type", typeof value);
+    let newArray = copyMovies.filter((movie) => {
+      for (const key in movie) {
+        if (key === option) {
+          let optionValue = movie[key];
+          return optionValue.includes(value);
+        }
+      }
+      return false;
+    });
+    console.log("Filtered Array:", newArray);
+    setMoviesArray(newArray);
   };
 
   return (
