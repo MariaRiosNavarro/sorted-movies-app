@@ -7,6 +7,16 @@
   src: url("/src/assets/fonts/Roboto/Roboto-Medium.ttf");
 }
 
+@font-face {
+  font-family: RobotoB;
+  src: url("/src/assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoT;
+  src: url("/src/assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+
 @layer base {
   html {
     font-family: Roboto, Helvetica, sans-serif;
