@@ -39,6 +39,7 @@ const Search = () => {
       return false;
     });
     setMoviesArray(newArray);
+    setValue("");
   };
 
   return (
@@ -50,6 +51,7 @@ const Search = () => {
           value={value}
           placeholder="Type here"
           className="input input-bordered input-secondary w-full max-w-xs border-2 "
+          autoFocus
         />
 
         <select
