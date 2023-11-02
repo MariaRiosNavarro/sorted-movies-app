@@ -3,8 +3,7 @@ import { useMyContext } from "../Context/useMyContext";
 import movies from "../db/movies";
 
 const Search = () => {
-  const { moviesArray, setMoviesArray } = useMyContext();
-  const { search, setSearch } = useMyContext();
+  const { setMoviesArray } = useMyContext();
   const [value, setValue] = useState("");
   const [option, setOption] = useState("title");
 
@@ -12,19 +11,17 @@ const Search = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Search Query:", value);
-    console.log("Search Option:", option);
-    console.log("type", typeof value);
     let newArray = copyMovies.filter((movie) => {
       for (const key in movie) {
         if (key === option) {
           let optionValue = movie[key];
-          return optionValue.includes(value);
+          let lowerOption = optionValue.toLowerCase();
+          let lowerValue = value.toLowerCase();
+          return lowerOption.includes(lowerValue);
         }
       }
       return false;
     });
-    console.log("Filtered Array:", newArray);
     setMoviesArray(newArray);
   };
 

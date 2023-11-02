@@ -2,8 +2,7 @@ import MovieCard from "./MovieCard";
 import { useMyContext } from "../Context/useMyContext";
 
 const MovieList = () => {
-  const { moviesArray, setMoviesArray } = useMyContext();
-  const { search, setSearch } = useMyContext();
+  const { moviesArray } = useMyContext();
 
   return (
     <>

@@ -6,12 +6,9 @@ export const useMyContext = () => useContext(AppContext);
 
 export const AppProvider = ({ children }) => {
   const [moviesArray, setMoviesArray] = useState(movies);
-  const [search, setSearch] = useState("");
 
   return (
-    <AppContext.Provider
-      value={{ moviesArray, setMoviesArray, search, setSearch }}
-    >
+    <AppContext.Provider value={{ moviesArray, setMoviesArray }}>
       {children}
     </AppContext.Provider>
   );
