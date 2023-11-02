@@ -12,12 +12,12 @@ const MovieList = () => {
 
   const handleDateAscending = () => {
     copyMovies.sort((a, b) => a.year - b.year);
-    console.log(copyMovies);
+    setMoviesArray(copyMovies);
   };
 
   const handleDateDescending = () => {
     copyMovies.sort((a, b) => b.year - a.year);
-    console.log(copyMovies);
+    setMoviesArray(copyMovies);
   };
   const handleWorstRate = () => {
     copyMovies.sort((a, b) => a.rate - b.rate);
@@ -29,21 +29,21 @@ const MovieList = () => {
     setMoviesArray(copyMovies);
   };
   const handleAphabetical = () => {
-    copyMovies.sort((a, b) => a.localeCompare(b));
-    console.log(copyMovies);
+    copyMovies.sort((a, b) => a.title.localeCompare(b.title));
+    setMoviesArray(copyMovies);
   };
   const handleDescendingAlphabetical = () => {
-    copyMovies.sort((a, b) => b.localeCompare(a));
-    console.log(copyMovies);
+    copyMovies.sort((a, b) => b.title.localeCompare(a.title));
+    setMoviesArray(copyMovies);
   };
 
   return (
     <>
       <div className="flex items-center justify-center flex-wrap">
-        <Button action={handleWorstRate} name="Rate ⬇️" />
-        <Button action={handleBestRate} name="Rate ⬆️" />
-        <Button action={handleDateAscending} name="Date  ⬆️" />
-        <Button action={handleDateDescending} name="Date  ⬇️" />
+        <Button action={handleWorstRate} name="Rate ⬇" />
+        <Button action={handleBestRate} name="Rate ⬆" />
+        <Button action={handleDateAscending} name="Date  ⬆" />
+        <Button action={handleDateDescending} name="Date  ⬇" />
       </div>
       <div className="flex items-center justify-center flex-wrap">
         <Button action={handleAphabetical} name="A-Z" />
