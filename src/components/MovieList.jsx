@@ -6,7 +6,7 @@ const MovieList = () => {
 
   return (
     <>
-      <article>
+      <article className="md:grid grid-cols-2">
         {moviesArray.map((movie, index) => (
           <MovieCard moviesObject={movie} key={index} />
         ))}
