@@ -3,17 +3,31 @@ const Star = ({ rate }) => {
 
   for (let i = 1; i <= 10; i++) {
     if (i <= rate) {
-      stars.push(<img key={i} src="/stars/full.png" alt={`Full Star ${i}`} />);
+      stars.push(
+        <img
+          className="w-10 h-10"
+          key={i}
+          src="/stars/full.png"
+          alt={`Full Star ${i}`}
+        />
+      );
     } else {
       stars.push(
-        <img key={i} src="/stars/empty.png" alt={`Empty Star ${i}`} />
+        <img
+          className="w-10 h-10"
+          key={i}
+          src="/stars/empty.png"
+          alt={`Empty Star ${i}`}
+        />
       );
     }
   }
 
   return (
     <>
-      <div>{stars}</div>
+      <div className="flex flex-wrap gap-4 w-6/7 items-center justify-center">
+        {stars}
+      </div>
     </>
   );
 };
