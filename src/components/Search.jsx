@@ -48,7 +48,7 @@ const Search = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center justify-center">
+    <form onSubmit={handleSubmit} className="flex items-center justify-center ">
       <div className="flex flex-col items-center justify-center m-4 gap-4">
         <input
           onChange={(event) => setValue(event.target.value)}
