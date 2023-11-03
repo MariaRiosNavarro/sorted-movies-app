@@ -1,6 +1,6 @@
 import ButtonsContainer from "../components/ButtonsContainer";
 import MovieList from "../components/MovieList";
-import RadioBtnContainer from "../components/RadioBtnContainer";
+import CheckboxBtnContainer from "../components/CheckboxBtnContainer";
 import ScrollTo from "../components/ScrollTo";
 import Search from "../components/Search";
 
@@ -16,7 +16,7 @@ const Home = () => {
             <ButtonsContainer />
             <Search />
           </div>
-          <RadioBtnContainer />
+          <CheckboxBtnContainer />
         </div>
         <ScrollTo top={true} />
         <MovieList />

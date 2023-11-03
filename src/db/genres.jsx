@@ -1,4 +1,4 @@
-export const allGenres = [
+export const genres = [
   "Crime",
   "Drama",
   "Action",
