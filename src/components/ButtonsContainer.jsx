@@ -17,6 +17,8 @@ const ButtonsContainer = () => {
   //BETTER compare with minus(-), NUmbers
   // sortedData.sort((a, b) =>Number(b.year )- Number(a.year));
 
+  //Exist to the .toSorted() too
+
   const handleDateAscending = () => {
     copyMovies.sort((a, b) => Number(a.year) - Number(b.year));
     setMoviesArray(copyMovies);
