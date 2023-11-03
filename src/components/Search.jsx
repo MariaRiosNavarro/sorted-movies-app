@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMyContext } from "../Context/useMyContext";
+import SearchIcon from "../assets/svg/SearchIcon";
 import movies from "../db/movies";
 
 const Search = () => {
@@ -7,11 +8,12 @@ const Search = () => {
   const [value, setValue] = useState("");
   const [option, setOption] = useState("title");
 
+  //I use directly the movies of data base and not from context, to avoid the new state every time
   const copyMovies = [...movies];
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // New Array to display the search
+    // New Array to display the search, (this will be our new state in setMoviesArray)
     let newArray = copyMovies.filter((movie) => {
       //we check all keys of the array
       for (const key in movie) {
@@ -69,20 +71,7 @@ const Search = () => {
         type="submit"
         className="btn btn-ghost btn-circle border-4 border-primary bg-secondary hover:bg-accent hover:border-secondary"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 stroke-primary hover:stroke-secondary"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="3"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
+        <SearchIcon />
       </button>
     </form>
   );
