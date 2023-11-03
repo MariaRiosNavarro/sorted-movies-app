@@ -25,7 +25,7 @@ const Star = ({ rate }) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-4 w-6/7 items-center justify-cente md:w-1/2">
+      <div className="flex flex-wrap gap-4 w-6/7 items-center justify-center md:w-1/2 md:items-center md:justify-center">
         {stars}
       </div>
     </>
