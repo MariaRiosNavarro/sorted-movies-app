@@ -14,23 +14,26 @@ const ButtonsContainer = () => {
   // we use the minus(-) but normally we should
   // transform them into numbers.
 
+  //BETTER compare with minus(-), NUmbers
+  // sortedData.sort((a, b) =>Number(b.year )- Number(a.year));
+
   const handleDateAscending = () => {
-    copyMovies.sort((a, b) => a.year - b.year);
+    copyMovies.sort((a, b) => Number(a.year) - Number(b.year));
     setMoviesArray(copyMovies);
   };
 
   const handleDateDescending = () => {
-    copyMovies.sort((a, b) => b.year - a.year);
+    copyMovies.sort((a, b) => Number(b.year) - Number(a.year));
     setMoviesArray(copyMovies);
   };
 
   const handleWorstRate = () => {
-    copyMovies.sort((a, b) => a.rate - b.rate);
+    copyMovies.sort((a, b) => Number(a.rate) - Number(b.rate));
     setMoviesArray(copyMovies);
   };
 
   const handleBestRate = () => {
-    copyMovies.sort((a, b) => b.rate - a.rate);
+    copyMovies.sort((a, b) => Number(b.rate) - Number(a.rate));
     setMoviesArray(copyMovies);
   };
   const handleAphabetical = () => {
