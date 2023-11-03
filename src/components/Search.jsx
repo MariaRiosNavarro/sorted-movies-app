@@ -8,7 +8,10 @@ const Search = () => {
   const [value, setValue] = useState("");
   const [option, setOption] = useState("title");
 
-  //I use directly the movies of data base and not from context, to avoid the new state every time
+  //I use directly the movies of data base and not from context,
+  //to avoid the new state every time, i need the complete Array everytime
+  //so that i can use later the rate, date, and alfabetical buttons
+
   const copyMovies = [...movies];
 
   const handleSubmit = (event) => {
