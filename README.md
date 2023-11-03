@@ -6,7 +6,7 @@ The App can sort movies alphabetically, by date and rate. It is also possible to
 
 I have also added 2 autoscroll buttons, to scroll to the top or the bottom of the page.
 
-I followed the best SetUp for vite(react)+tailwind: [this freecodecamp SetUp](https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/)
+I followed the best SetUp guide for vite(react)+tailwind: [this freecodecamp SetUp](https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/)
 
 # Mobile
 
