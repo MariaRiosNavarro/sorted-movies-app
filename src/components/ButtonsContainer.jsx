@@ -5,6 +5,14 @@ const ButtonsContainer = () => {
   const { moviesArray, setMoviesArray } = useMyContext();
 
   const copyMovies = [...moviesArray];
+  //to  not change the original Initial State, we need a copy for the filter options
+
+  // # In case of Rate, and Year (database->strings):
+  // JS does not always interpret data types well,
+  // you have to be careful, here we compare strings
+  // directly and js recognises them as numbers when
+  // we use the minus(-) but normally we should
+  // transform them into numbers.
 
   const handleDateAscending = () => {
     copyMovies.sort((a, b) => a.year - b.year);
@@ -15,6 +23,7 @@ const ButtonsContainer = () => {
     copyMovies.sort((a, b) => b.year - a.year);
     setMoviesArray(copyMovies);
   };
+
   const handleWorstRate = () => {
     copyMovies.sort((a, b) => a.rate - b.rate);
     setMoviesArray(copyMovies);
