@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import movies from "../db/movies";
+import { genres } from "../db/genres";
 const AppContext = createContext();
 
 export const useMyContext = () => useContext(AppContext);
