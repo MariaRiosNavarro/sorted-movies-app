@@ -38,12 +38,12 @@ const ButtonsContainer = () => {
     <>
       <div className="flex-col pl-4 items-center justify-center">
         <div className="flex items-center justify-center flex-wrap">
-          <Button action={handleBestRate} name="Rate ⬆" />
+          <Button action={handleWorstRate} name="Rate ⬆" />
           <Button action={handleDateAscending} name="Date  ⬆" />
           <Button action={handleAphabetical} name="A-Z" />
         </div>
         <div className="flex items-center justify-center flex-wrap">
-          <Button action={handleWorstRate} name="Rate ⬇" />
+          <Button action={handleBestRate} name="Rate ⬇" />
           <Button action={handleDateDescending} name="Date  ⬇" />
           <Button action={handleDescendingAlphabetical} name="Z-A" />
         </div>
