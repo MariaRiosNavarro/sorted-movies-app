@@ -25,10 +25,10 @@ I followed the best SetUp guide for vite(react)+tailwind: [this freecodecamp Set
 
 <div>
 
-<img src="./public/readme/readme7.png" alt="readme-pic7" width="200">
-<img src="./public/readme/readme8.png" alt="readme-pic8" width="200">
-<img src="./public/readme/readme10.png" alt="readme-pic" width="200">
-<img src="./public/readme/readme11.png" alt="readme-pic" width="200">
-<img src="./public/readme/readme12.png" alt="readme-pic" width="200">
+<img src="./public/readme/readme7.png" alt="readme-pic7" width="300">
+<img src="./public/readme/readme8.png" alt="readme-pic8" width="300">
+<img src="./public/readme/readme10.png" alt="readme-pic" width="300">
+<img src="./public/readme/readme11.png" alt="readme-pic" width="300">
+<img src="./public/readme/readme12.png" alt="readme-pic" width="300">
 
 </div>
