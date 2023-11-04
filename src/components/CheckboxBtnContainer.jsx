@@ -8,9 +8,9 @@ const CheckboxBtnContainer = () => {
   const { setMoviesArray } = useMyContext();
   const [updatedCheckedGenres, setUpdatedCheckedGenres] = useState([]);
 
-  useEffect(() => {
-    console.log(updatedCheckedGenres);
-  }, [updatedCheckedGenres]);
+  // useEffect(() => {
+  //   console.log(updatedCheckedGenres);
+  // }, [updatedCheckedGenres]);
 
   //I use directly the movies of data base and not from context,
   //to avoid the new state every time, i need the complete Array everytime
@@ -67,7 +67,7 @@ const CheckboxBtnContainer = () => {
   };
 
   return (
-    <section className="flex flex-wrap justify-center  items-center mx-auto my-0  md:w-[35rem] md:m-0 md:justify-center md:h-[100%]md:border md:border-red-700">
+    <section className="flex flex-wrap justify-center  items-center mx-auto my-0  md:w-[35rem] md:m-0 md:justify-center md:h-[100%] ">
       {allGenres.map((genre, index) => (
         <CheckboxBtn
           key={index}

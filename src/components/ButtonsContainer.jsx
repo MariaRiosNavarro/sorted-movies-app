@@ -48,7 +48,7 @@ const ButtonsContainer = () => {
   };
   return (
     <>
-      <div className="flex-col ">
+      <div className="flex-col pl-4 items-center justify-center">
         <div className="flex items-center justify-center flex-wrap">
           <Button action={handleBestRate} name="Rate ⬆" />
           <Button action={handleDateAscending} name="Date  ⬆" />

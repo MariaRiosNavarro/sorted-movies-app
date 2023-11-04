@@ -1,6 +1,6 @@
 const CheckboxBtn = (props) => {
   return (
-    <div className="flex-col  w-1/3 items-center justify-center flex-wrap text-center  md:gap-4 md:border md:w-[5rem]  ">
+    <div className="flex-col  w-1/3 items-center justify-center flex-wrap text-center  md:gap-4  md:w-[5rem]  ">
       <label className="block text-center" htmlFor={`radion${props.genre}`}>
         {props.genre}
       </label>
