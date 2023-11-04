@@ -7,18 +7,6 @@ const ButtonsContainer = () => {
   const copyMovies = [...moviesArray];
   //to  not change the original Initial State, we need a copy for the filter options
 
-  // # In case of Rate, and Year (database->strings):
-  // JS does not always interpret data types well,
-  // you have to be careful, here we compare strings
-  // directly and js recognises them as numbers when
-  // we use the minus(-) but normally we should
-  // transform them into numbers.
-
-  //BETTER compare with minus(-), NUmbers
-  // sortedData.sort((a, b) =>Number(b.year )- Number(a.year));
-
-  //Exist to the .toSorted() too
-
   const handleDateAscending = () => {
     copyMovies.sort((a, b) => Number(a.year) - Number(b.year));
     setMoviesArray(copyMovies);
